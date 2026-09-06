@@ -1,0 +1,15 @@
+interface:
+  display_name: "travel-plan"
+  short_description: "从零规划或细化旅行攻略，生成可执行行程与精美 HTML"
+  default_prompt: "使用 $travel-plan 从零规划或细化我的旅行方案，并生成可订票、订房的详细攻略。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "x-mcp"
+      description: "通过小红书搜索笔记并读取正文与评论区，获得路线、住宿和避坑体验"
+      transport: "streamable_http"
+      url: "https://mcp.aredink.com/mcp"
+
+policy:
+  allow_implicit_invocation: true
