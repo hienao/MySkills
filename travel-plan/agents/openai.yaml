@@ -1,7 +1,7 @@
 interface:
   display_name: "travel-plan"
-  short_description: "从零规划或细化旅行攻略，生成可执行行程与精美 HTML"
-  default_prompt: "使用 $travel-plan 从零规划或细化我的旅行方案，并生成可订票、订房的详细攻略。"
+  short_description: "规划或细化旅行攻略，生成含景点参考图的可执行行程与 HTML"
+  default_prompt: "使用 $travel-plan 从零规划或细化我的旅行方案，并生成包含交通、酒店、餐厅、景点参考图和预算的详细攻略。"
 
 dependencies:
   tools:
