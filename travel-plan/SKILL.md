@@ -5,7 +5,7 @@ description: 从零研究、规划并生成旅行攻略，或补全现有多目�
 
 # travel-plan — 旅行规划与攻略细化
 
-这是完整、可独立运行的旅行规划 skill。它包含 Travel Planner 的需求确认、双轮研究、路线规划、HTML 生成、预算与行前准备能力，并增加多方案完整比较、车次核验、景点参考图、餐厅分店与营业时间、每个住宿地 2–3 家酒店及优缺点等执行层细节。
+这是完整、可独立运行的旅行规划 skill。它包含 Travel Planner 的需求确认、双轮研究、路线规划、HTML 生成、预算与行前准备能力，并增加多方案完整比较、车次核验、每日路径规划图、景点参考图、餐厅分店与营业时间、每个住宿地 2–3 家酒店及优缺点等执行层细节。
 
 依赖 `$x-mcp` 获取小红书笔记和评论区反馈；公开网络用于核验官方或预订平台信息。x-mcp 的安装、登录或连接说明以 [xpzouying/x-mcp](https://github.com/xpzouying/x-mcp) 为准。
 
@@ -104,6 +104,7 @@ description: 从零研究、规划并生成旅行攻略，或补全现有多目�
 - 适合人群、优势、短板和关键取舍。
 - 推荐交通方式；高铁/飞机/自驾备选、具体班次样本、时间和成本。
 - 按天的主题、时间段、3–5 个景点或活动、用餐和住宿。
+- 每日路径规划图：编号与时间线一致，展示真实相对方位、分段距离和交通时间；编号已表达顺序时不画箭头。
 - 景点开放/停止入场时间、门票、预约及闭馆日。
 - 与路线中的主要景点一一对应的参考图、替代文本和可追溯来源；同一图片跨方案复用，不重复下载。
 - 顺路餐厅的准确分店、地址、营业时间、建议菜品和避坑。
@@ -140,7 +141,7 @@ description: 从零研究、规划并生成旅行攻略，或补全现有多目�
 
 ## Phase 4：生成或更新 HTML
 
-需要 HTML 时，必须先完整阅读 [references/html-spec.md](references/html-spec.md)，再生成页面。用户要求景点参考图、图库或可远端部署的图文页面时，还必须完整阅读 [references/image-spec.md](references/image-spec.md)。
+需要 HTML 时，必须先完整阅读 [references/html-spec.md](references/html-spec.md)，再生成页面。用户要求景点参考图、图库或可远端部署的图文页面时，还必须完整阅读 [references/image-spec.md](references/image-spec.md)。用户要求每日路线、路径图、景点方位或距离可视化时，还必须完整阅读 [references/route-map-spec.md](references/route-map-spec.md)，并参考 [assets/daily-route-map-sample.html](assets/daily-route-map-sample.html)。
 
 文件名默认 `{目的地拼音}_travel_guide.html`；多目的地比较可用 `{出发地拼音}_trip_comparison.html`。保存到用户工作目录。
 
